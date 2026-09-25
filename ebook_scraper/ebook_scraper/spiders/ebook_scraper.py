@@ -1,24 +1,24 @@
 import scrapy
 
+from scrapy.loader import ItemLoader
+
+from ebook_scraper.items import EbookScraperItem
+
 
 class EbookScraperSpider(scrapy.Spider):
-    name = "ebook_scraper"
+    name = "ebook"
     allowed_domains = ["books.toscrape.com"]
-    start_urls = ["https://books.toscrape.com/"]
+    start_urls = ["https://books.toscrape.com/catalogue/category/books/travel_2/index.html"]
 
     def parse(self, response):
-        print("=====================================================[Parsing the response from the start URL...]=================================================================")
+        self.logger.info("Parsing the response from the start URL")
 
-        ebooks = response.css("article")
+        books = response.css("article.product_pod")
 
-        for ebook in ebooks:
-            title = ebook.css("h3 a::attr(title)").get()
-            price = ebook.css(".price_color::text").get()
-            availability = ebook.css(".availability::text").get().strip()
+        for book in books:
+            loader = ItemLoader(item=EbookScraperItem(), selector=book)
+            loader.add_css('title', 'h3 a::attr(title)')
+            loader.add_css('price', 'p.price_color::text')
+            loader.add_css('availability', 'p.instock.availability::text')
 
-            yield {
-                "title": title,
-                "price": price,
-                "availability": availability,
-            }
-
+            yield loader.load_item()
