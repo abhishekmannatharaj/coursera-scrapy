@@ -9,6 +9,7 @@ class EbookScraperSpider(scrapy.Spider):
     name = "ebook"
     allowed_domains = ["books.toscrape.com"]
     start_urls = ["https://books.toscrape.com/catalogue/category/books/travel_2/index.html"]
+    cols = ["title", "price", "availability"]
 
     def parse(self, response):
         self.logger.info("Parsing the response from the start URL")

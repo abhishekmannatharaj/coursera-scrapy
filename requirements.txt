@@ -1,2 +1,5 @@
 ipython
 scrapy
+openpyxl
+pymongo
+python-dotenv

@@ -3,6 +3,12 @@
 venv/
 ENV/
 
+# Secrets and local environment settings
+.env
+.env.*
+*.env
+atlas-credentials.env
+
 # Python Cache
 __pycache__/
 *.py[cod]
@@ -12,10 +18,11 @@ __pycache__/
 .scrapy/
 *.log
 
-# Scraping data outputs (Optional: uncomment if you don't want to commit data files)
-# *.csv
-# *.json
-# *.xml
+# Generated data files
+*.xlsx
+*.json
+*.csv
+*.xml
 
 # IDEs and Editors
 .vscode/
