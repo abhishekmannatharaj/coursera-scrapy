@@ -8,6 +8,7 @@ ENV/
 .env.*
 *.env
 atlas-credentials.env
+atlas-credenrials.env
 
 # Python Cache
 __pycache__/
