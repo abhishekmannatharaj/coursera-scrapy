@@ -8,7 +8,7 @@ from ebook_scraper.items import EbookScraperItem
 class EbookScraperSpider(scrapy.Spider):
     name = "ebook"
     allowed_domains = ["books.toscrape.com"]
-    start_urls = ["https://books.toscrape.com/catalogue/category/books/travel_2/index.html"]
+    start_urls = ["https://books.toscrape.com/catalogue/category/books/mystery_3/page-2.html"]
     cols = ["title", "price", "availability"]
 
     def parse(self, response):
