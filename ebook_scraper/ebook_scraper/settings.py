@@ -17,7 +17,12 @@ ADDONS = {}
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = "ebook_scraper (+http://www.yourdomain.com)"
-
+DOWNLOADER_MIDDLEWARES = {
+'scrapy. downloadermiddlewares. useragent. UserAgentMiddleware' : None,
+'scrapy_user_agents.middle'
+'wares. RandomUserAgentMiddleware': 400,
+'quotes.middlewares. QuotesDownloaderMiddleware' : 543
+}
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 

@@ -14,6 +14,16 @@ class EbookScraperSpiderMiddleware:
     # scrapy acts as if the spider middleware does not modify the
     # passed objects.
 
+
+    def __init__ (self):
+        self.proxies = [
+            "45.61.186.166",
+            "45.61. 186. 163",
+            "45.61.116.166",
+            "192.61.186.166"
+        ]
+        self.counter = 0
+
     @classmethod
     def from_crawler(cls, crawler):
         # This method is used by Scrapy to create your spiders.
@@ -75,7 +85,14 @@ class EbookScraperDownloaderMiddleware:
         # - or return a Request object
         # - or raise IgnoreRequest: process_exception() methods of
         #   installed downloader middleware will be called
-        return None
+        request.meta['proxy'] = self.proxies[self.counter]
+
+        if self.counter == len(self.proxies) - 1:
+            self.counter = 0
+        else:
+            self.counter += 1
+
+        return request #changes for proxymodule project
 
     def process_response(self, request, response, spider):
         # Called with the response returned from the downloader.
