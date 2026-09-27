@@ -88,7 +88,6 @@ A collection of Scrapy learning projects covering book extraction, table parsing
 - `ebook_scraper/`: Foundational spiders, item loaders, pagination, and data-cleaning pipelines.
 - `project_1_champions_league/`: HTML table extraction for standings and team statistics.
 - `project_2_amazon_rank/`: Product title, price, and Best Sellers Rank extraction with configurable request headers.
-- `project_3_scraper_gui/`: Tkinter launcher that runs a selected Scrapy spider with `CrawlerProcess`.
 
 ## Setup
 
@@ -106,15 +105,11 @@ Each Scrapy command runs from that project's directory. Supply a target URL with
 ```powershell
 # ESPN-style standings table
 cd project_1_champions_league
-scrapy crawl ucl_table -a url="https://example.com/standings" -O standings.json
+scrapy crawl table -a url="https://example.com/standings" -O standings.json
 
 # Amazon product page
 cd ..\project_2_amazon_rank
-scrapy crawl bsr_spider -a url="https://www.amazon.com/dp/PRODUCT_ID" -O product.json
+scrapy crawl tracker -a url="https://www.amazon.com/dp/PRODUCT_ID" -O product.json
 
-# Desktop launcher
-cd ..\project_3_scraper_gui
-python app_gui.py
-```
 
 The target sites may use JavaScript rendering or restrict automated access. Check each site's terms and `robots.txt`, and keep requests rate-limited. Scrapy's robots setting remains enabled in both new projects.
