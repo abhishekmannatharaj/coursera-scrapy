@@ -2,6 +2,11 @@
 
 A web scraping project built with **Scrapy** and managed via **uv** to extract book data from Coursera/target websites.
 
+<img width="1914" height="917" alt="image" src="https://github.com/user-attachments/assets/1abb7904-9acc-4941-ad07-92216e98b9eb" />
+
+<img width="1226" height="803" alt="image" src="https://github.com/user-attachments/assets/97ecb079-c522-4f56-9936-e708f0c62b60" />
+
+
 ## 🛠️ Prerequisites
 
 Ensure you have [uv](https://github.com) installed on your system.
