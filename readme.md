@@ -6,6 +6,7 @@ A web scraping project built with **Scrapy** and managed via **uv** to extract b
 
 <img width="1226" height="803" alt="image" src="https://github.com/user-attachments/assets/97ecb079-c522-4f56-9936-e708f0c62b60" />
 
+<img width="1145" height="670" alt="image" src="https://github.com/user-attachments/assets/26ada04e-550f-4dfe-be53-b9b1bc6dd6fb" />
 
 ## 🛠️ Prerequisites
 
