@@ -1,0 +1,35 @@
+# Virtual Environment (uv / standard)
+.venv/
+venv/
+ENV/
+
+# Secrets and local environment settings
+.env
+.env.*
+*.env
+atlas-credentials.env
+atlas-credenrials.env
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Scrapy temporary files and logs
+.scrapy/
+*.log
+
+# Generated data files
+*.xlsx
+*.json
+*.csv
+*.xml
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
