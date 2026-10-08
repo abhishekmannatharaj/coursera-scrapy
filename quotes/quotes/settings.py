@@ -14,6 +14,30 @@ NEWSPIDER_MODULE = "quotes.spiders"
 
 ADDONS = {}
 
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+
+SPIDER_MODULES = ['quotes. spiders' ]
+NEWSPIDER_MODULE = 'quotes. spiders'
+
+# scrapy-playwright
+
+DOWNLOAD_HANDLERS = {
+"http": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
+"https": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
+}
+TWISTED_REACTOR = "twisted. internet.asyncioreactor.AsyncioSelectorReactor"
+
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = "quotes (+http://www.yourdomain.com)"
